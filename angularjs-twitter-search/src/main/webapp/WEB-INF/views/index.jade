@@ -1,0 +1,18 @@
+-@ val title: String = "Scalatra AngularJS App"
+- attributes("title") = title
+
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.btn.btn-navbar
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand(href="#") =title
+      .nav-collapse.collapse(ng-controller="MenuCtrl")
+        ul.nav
+          li(ng-repeat="menu in menus" ng-class="{active: menu.selected}")
+            a(href="{{menu.href}}" ng-click="click(menu)") {{menu.title}}
+
+.container
+  <div ng-view></div>
