@@ -1,6 +1,2 @@
-module = angular.module("myApp.directives", [])
+module = angular.module("Twitter.directives", [])
 
-module.directive "appVersion", ["version", (version) ->
-  (scope, elm, attrs) ->
-    elm.text version
-]
