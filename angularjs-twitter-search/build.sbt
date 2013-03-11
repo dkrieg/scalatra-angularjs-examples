@@ -41,8 +41,8 @@ scalacOptions <++= scalaVersion map { sv =>
   if (sv startsWith "2.10") List(
     "-Xverify",
     "-Ywarn-all",
-    "-feature",
-    "-language:postfixOps"
+    "-feature"
+    // "-language:postfixOps"
     // "-language:reflectiveCalls",
     // "-language:implicitConversions"
     // "-language:higherKinds",

@@ -2,6 +2,7 @@ package controllers
 
 import org.scalatra.ScalatraServlet
 import org.scalatra.util.RicherString._
+import scala.language.postfixOps
 
 class TwitterController extends ScalatraServlet {
 
