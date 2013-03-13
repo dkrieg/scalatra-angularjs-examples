@@ -1,0 +1,3 @@
+scalatra-angularjs-app
+=======================
+
