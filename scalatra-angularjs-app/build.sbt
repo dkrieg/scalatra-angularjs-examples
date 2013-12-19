@@ -16,15 +16,7 @@ scmInfo := Some(
   )
 )
 
-scalaVersion := "2.10.0"
-
-crossScalaVersions := Seq(
-  "2.9.3-RC1",
-  "2.9.2",
-  "2.9.1", "2.9.1-1",
-  "2.9.0", "2.9.0-1",
-  "2.8.0", "2.8.1", "2.8.2"
-)
+scalaVersion := "2.10.3"
 
 scalacOptions ++= Seq(
   "-deprecation",
@@ -123,7 +115,8 @@ libraryDependencies ++= Seq(
   "org.json4s"   %% "json4s-jackson" % "3.1.0",
   "com.wordnik" % "swagger-core_2.10.0" % "1.2.0",
   "ch.qos.logback" % "logback-classic" % "1.0.6" % "runtime",
-  "org.eclipse.jetty" % "jetty-webapp" % "8.1.7.v20120910" % "test,container",
+  "org.eclipse.jetty" % "jetty-webapp" % "9.1.0.v20131115" % "test,container",
+  "org.eclipse.jetty" % "jetty-plus" % "9.1.0.v20131115" % "container",
   "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container;provided;test" artifacts (Artifact("javax.servlet", "jar", "jar"))
 )
 

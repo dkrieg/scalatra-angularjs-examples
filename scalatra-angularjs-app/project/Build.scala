@@ -4,8 +4,8 @@ import Keys._
 object Build extends Build {
 
   import java.net.URL
-  import com.github.siasia.PluginKeys.port
-  import com.github.siasia.WebPlugin.container
+  import com.earldouglas.xsbtwebplugin.PluginKeys.port
+  import com.earldouglas.xsbtwebplugin.WebPlugin.container
 
   val browse = TaskKey[Unit]("browse", "open web browser to localhost on container:port")
   val browseTask = browse <<= (streams, port in container.Configuration) map { (streams, port) =>
