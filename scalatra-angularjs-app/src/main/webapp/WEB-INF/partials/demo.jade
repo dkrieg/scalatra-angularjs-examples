@@ -1,10 +1,11 @@
 - import java.text.SimpleDateFormat
 - import java.util.Date
 
--@ val format: SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd")
--@ val now: String = format.format(new Date)
--@ val currency: String = "123456"
--@ val num: String = "98765.4321"
+- val format: SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd")
+- val currentDate: Date = new Date
+- val currentUnixtime: String = (currentDate.getTime()).toString()
+- val currencyToShow: String = "123456"
+- val num: String = "98765.4321"
 
 .container
   h1 This is the partial for view 3.
@@ -17,11 +18,11 @@
         hr
         h2 Hello {{yourName}}!
       pane(heading="Localization")
-        | Date: {{ '2012-04-01' | date:'fullDate' }}
+        | Date: {{ #{currentUnixtime} | date:'fullDate' }}
         <br/>
-        | Currency: {{ 123456 | currency }}
+        | Currency: {{ #{currencyToShow} | currency }}
         <br/>
-        | Number: {{ 98765.4321 | number }}
+        | Number: {{ #{num} | number }}
         <br/>
       pane(heading="Todo List")
         b TODO:
